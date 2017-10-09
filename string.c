@@ -1,5 +1,6 @@
 #include "string.h"
 
+// palauttaa merkkijonon pituuden
 int my_strlen(char *c){
 	int l=0;
 	while(*(c+l) != '\0'){
@@ -9,6 +10,7 @@ int my_strlen(char *c){
 };
 // Function that receives a string as a parameter and returns the length of that string
 
+// kopioi merkkijonon s merkkijonoon d
 void mystrcpy(char *s,char *d){
 	int i=0;
 	while(*(s+i) != '\0'){
@@ -20,6 +22,7 @@ void mystrcpy(char *s,char *d){
 };
 // Function that will copy the content of string s to string d 
 
+// vertailee kahta merkkijonoa
 int mystrcmp (char *s, char *d){
 	int t=0;
 	while((s[t]&&d[t])!='\0'){
@@ -41,6 +44,7 @@ int mystrcmp (char *s, char *d){
 // 0 if strings are equal
 // +n if d is ordered before s 
 
+// muuttaa pienet kirjaimet isoiksi kirjaimiksi
 int str2upper(char *s){
 	int t=0;
 	int c=0;
@@ -55,6 +59,7 @@ int str2upper(char *s){
 };
 // Converts all small characters to upper case characters in string and returns the number of changed characters
 
+// muuttaa isot kirjaimet pieniksi kirjaimiksi
 int str2lower_(char *s){
 	int t=0;
 	int c=0;
@@ -69,6 +74,7 @@ int str2lower_(char *s){
 };
 // Converts all capital characters to lower case characters in string. Function returns the number of changed characters
 
+// hävittää numerot merkkijonosta
 int str_strip_numbers(unsigned char *s){
 	int t=0;
 	int c=0;
@@ -86,6 +92,7 @@ int str_strip_numbers(unsigned char *s){
 };
 // removes all occurances of numbers, Function returns current length 
 
+// kopioi merkkijonon ja palauttaa pointerin kopioituun merkkijonoon
 char *strdupl(char *s){
 	char* t;
 	t=(char*)malloc(sizeof(char)*my_strlen(s));
